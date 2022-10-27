@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Gestores</title>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="shortcut icon" href="icon.icon" type="image/x-icon">
+</head>
+
+<body>
+  <div class="al1">
+    <button id="new2">
+      <a href="index.html" class="new2">Voltar</a>
+    </button>
+
+  </div>
+
+  <!-------------------------------------------------------->
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Gestores</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+    <!-------------------------------------------------------->
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <th>ID</th>
+            <th>EMAIL</th>
+            <th>TELEFONE</th>
+            <th>CIDADE</th>
+            <th>PROJETO</th>
+            <th></th>
+            <th></th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <!-------------------------------------------------------->
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+
+          <input id="m-id" hidden />
+
+          <label for="m-nome">Nome</label>
+          <input id="m-nome" placeholder="Insira o nome do gestor" type="text" required />
+          <!-------------------------------------------------------->
+          <label for="m-idG">ID</label>
+          <input id="m-idG" placeholder="Apenas Numeros" type="number" required />
+
+          <!-------------------------------------------------------->
+
+
+
+          <label for="m-projeto">Projeto</label>
+          <input id="m-projeto" type="text" required />
+
+
+
+          <!----------------------------------------------------------------------------------------->
+          <label for="m-telefone">Telefone</label>
+          <input id="m-telefone" placeholder="Insira seu celular com DDD" type="number" required />
+
+          <label for="m-email">Email</label>
+          <input id="m-email" placeholder="Insira seu e-mail TCS" type="text" required />
+
+          <label for="m-cidade">Localização</label>
+          <input id="m-cidade" placeholder="Localização" type="text" required />
+
+          <!----------------------------------------------------------------------------------------->
+          <button id="btnSalvar">Salvar</button>
+
+
+        </form>
+      </div>
+    </div>
+    <!-------------------------------------------------------->
+  </div>
+  <script src="javascript/cadastro_gestor.js"></script>
+  <footer>
+    &copy; Ponto&&virgula
+  </footer>
+
+</body>
+
+</html>

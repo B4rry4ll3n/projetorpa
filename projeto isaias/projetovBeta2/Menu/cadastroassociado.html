@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Associados</title>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="shortcut icon" href="icon.icon" type="image/x-icon">
+</head>
+
+<body>
+  <div class="al1">
+    <button id="new2">
+      <a href="index.html" class="new2">Voltar</a>
+    </button>
+
+  </div>
+
+  <!-------------------------------------------------------->
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Associados</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+    <!-------------------------------------------------------->
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <td>Isaias</td>
+            <th>ID</th>
+            <td>3123</td>
+            <th>CARGO</th>
+            <td>ANALISTA</td>
+            <th>SKILL</th>
+            <td>Scrum master</td>
+            <th>STATUS</th>
+            <td>Em projeto</td>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <!-------------------------------------------------------->
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+
+          <input id="m-id" hidden />
+
+          <label for="m-nome">Nome</label>
+          <input id="m-nome" placeholder="Insira o nome do associado" type="text" required />
+          <!-------------------------------------------------------->
+          <label for="m-mat">ID</label>
+          <input id="m-mat" placeholder="Apenas Numeros" type="number" required />
+
+          <!-------------------------------------------------------->
+          <label for="m-funcao">Função</label>
+          <input id="m-funcao" placeholder="Cargo" type="text" required />
+          <!-------------------------------------------------------->
+
+          <label for="m-especialidade">Especialidade</label>
+          <input id="m-especialidade" placeholder="Java, PHP, C#, JavaScript..." type="text" required />
+
+          <!-------------------------------------------------------->
+          
+          <div>
+            <label for="m-status">Status</label>
+            <!-- <input id="m-status" placeholder="Ativo,inativo ou em entrevista" type="text" required /> -->            
+            <div>
+                <select id="m-status" placeholder="Ativo,inativo ou em entrevista" required>            
+                  <option value="Ativo">Ativo</option>
+                  <option value="Inativo">Inativo</option>
+                  <option value="Em Entrevista">Em entrevista</option>
+                </select>
+            </div>
+          </div>
+
+          <!----------------------------------------------------------------------------------------->
+          <label for="m-celular">Celular</label>
+          <input class="telefone" id="m-celular" placeholder="Insira seu celular com DDD" type="tel" required />
+
+          <label for="m-email">Email</label>
+          <input id="m-email" placeholder="Insira seu e-mail TCS" type="email" required />
+
+          <label for="m-localizacao">Localização</label>
+          <input id="m-localizacao" placeholder="Localização" type="text" required />
+
+          <label for="m-data">Associado Inativo até:</label>
+          <input id="m-data" placeholder="" type="date" required />
+
+          <!----------------------------------------------------------------------------------------->
+          <button id="btnSalvar">Salvar</button>
+
+
+        </form>
+      </div>
+    </div>
+    <!-------------------------------------------------------->
+  </div>
+  <script src="javascript/cadastro_associado.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+  <footer>
+    &copy; Ponto&&virgula
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONES DO GOOLE-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <title>Tela Consulta</title>
+    <link rel="shortcut icon" href="icon.icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'
+      rel='stylesheet'>
+    <link rel="stylesheet" href="css/cadastro.css">
+
+    <link rel="stylesheet" href="css/barrapesquisar.css">
+
+  </head>
+  <div class="logo" id="logo">
+    <img src="imagem/logologin3.png" alt="">
+  </div>
+
+  <body>
+
+
+    <section class="sidebar">
+
+      <!--Usei o rodapé para o background no topo-->
+      <div class="rodape">
+
+      </div>
+      <!--AQUI COMEÇA O BOTAO ABRIR-->
+      <div class="btnAbre">
+        <span class="material-icons">
+          menu
+        </span>
+      </div><!--AQUI FINALIZA O BOTAO-->
+      <nav class="menuLateral">
+
+        <div class="titulo">
+
+          <img src="imagem/logologin3.png" alt="">
+
+          <span class="material-icons btnFecha">
+            close
+          </span>
+        </div>
+
+
+        <ul>
+          <li>
+            <a href="index2.html">Consultar Inativos</a>
+          </li>
+          <li>
+            <a href="cadastrogestor.html">Gestores</a>
+          </li>
+          <li>
+            <a href="cadastroassociado.html">Cadastrar/Atualizar</a>
+          </li>
+          <!---<li>
+                <a href="#">Menu</a>
+            </li> --->
+          <li>
+            <a href="login.html">Sair</a>
+          </li>
+
+        </ul>
+      </section>
+
+    </nav>
+    
+
+    <!-------------------------- CAIXA DE PESQUISA------------------------------>
+    <div class="wrapper">
+      <input id="name" type="text" class="input"
+        placeholder="Pesquise aqui por skils...">
+      <button  onclick="searchItem()" id="send" class="searchbtn" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-------------------------------------------------------->
+    <div class="container">
+      <!-------------------------------------------------------->
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th>NOME</th>
+              <th></th>
+              <th>ID</th>
+              <th>CARGO</th>
+              <th>SKILL</th>
+              <th>STATUS</th>
+              <th></th>
+              <th></th>
+              
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+      <!-------------------------------------------------------->
+      <div class="modal-container">
+        <div class="modal">
+          <form>
+            <label for="m-nome">Nome</label>
+            <input id="m-nome" placeholder="Insira o nome do associado"
+              type="text" required />
+            <!-------------------------------------------------------->
+            <label for="m-funcao">Função</label>
+            <input id="m-funcao" placeholder="Cargo" type="text" required />
+            <!-------------------------------------------------------->
+            <label for="m-especialidade">Especialidade</label>
+            <input id="m-especialidade" placeholder="Java, PHP, C#,
+              JavaScript..." type="text" required />
+            <!-------------------------------------------------------->
+            <label for="m-status">Status</label>
+            <input id="m-status" placeholder="#" type="text" required />
+
+            <label for="m-mat">ID</label>
+            <input id="m-mat" placeholder="Apenas Numeros" type="number"
+              required />
+
+            <label for="m-celular">Celular</label>
+            <input id="m-celular" placeholder="Insira seu celular com DDD"
+              type="tel" required />
+
+
+            <button id="btnSalvar">Salvar</button>
+          </form>
+        </div>
+      </div>
+      <!-------------------------------------------------------->
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="javascript/telaP.js"></script>
+    <script src="javascript/sidebar.js"></script>
+
+    <footer>
+      &copy; Ponto&&virgula
+    </footer>
+  </body>
+</html>

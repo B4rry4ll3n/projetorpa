@@ -1,0 +1,214 @@
+package com.tcs.Ponto_e_Virgula.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name ="colaborador")
+public class Colaborador {
+	
+	/* id
+	 * nome
+	 * id_colaborador_TCS
+	 * cargo +
+	 * localizacao
+	 * status +
+	 * contato_telefone
+	 * email
+	 * especialidade
+	 * data dispo
+	 * 
+	 * 
+	 * */
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Integer id;
+	
+	
+	
+	@Column(name = "nome", length = 200, nullable = false)
+	private String  nome ;
+	
+	@Column(name = "id_Colaborador_TCS", nullable = true)
+	private int  id_Colaborador_TCS ;
+	
+	
+	@Column(name = "cargo", length = 200, nullable = true)
+	private String cargo ;
+	
+	
+	@Column(name = "especialidade", length = 200, nullable = true)
+	private String  especialidade ;
+	
+	
+	@Column(name ="status", length = 15,nullable = true)
+	private String status;
+	
+	@Column(name ="data", length = 15,nullable = true)
+	private String data;
+	
+	
+
+	@Column(name = "contato_email", length = 200, nullable = true)
+	private String  contato_email ;
+	
+	
+	@Column(name = "contato_telefone", length = 200, nullable = true)
+	private String  contato_telefone ;
+	
+	
+	@Column(name = "localizacao", length = 200, nullable = true)
+	private String localizacao;
+
+	@Deprecated
+	public Colaborador() {}
+	
+
+	@ManyToOne
+	@JoinColumn(name="gestor_id")
+	private Gestor gestor;
+	
+
+	public Colaborador(Integer id, String nome, int id_Colaborador_TCS, String cargo, String especialidade,
+			String status, String data, String contato_email, String contato_telefone,
+			String localizacao) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.id_Colaborador_TCS = id_Colaborador_TCS;
+		this.cargo = cargo;
+		this.especialidade = especialidade;
+		this.status = status;
+		this.data = data;
+		this.contato_email = contato_email;
+		this.contato_telefone = contato_telefone;
+		this.localizacao = localizacao;
+	}
+
+
+
+
+
+
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getId_Colaborador_TCS() {
+		return id_Colaborador_TCS;
+	}
+
+	public void setId_Colaborador_TCS(int id_Colaborador_TCS) {
+		this.id_Colaborador_TCS = id_Colaborador_TCS;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public String getEspecialidade() {
+		return especialidade;
+	}
+
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	
+
+
+
+
+
+
+	public String getData() {
+		return data;
+	}
+
+
+
+
+
+
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+
+
+
+
+
+
+	public String getContato_email() {
+		return contato_email;
+	}
+
+	public void setContato_email(String contato_email) {
+		this.contato_email = contato_email;
+	}
+
+	public String getContato_telefone() {
+		return contato_telefone;
+	}
+
+	public void setContato_telefone(String contato_telefone) {
+		this.contato_telefone = contato_telefone;
+	}
+
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Colaborador [id=" + id + ", nome=" + nome + ", id_Colaborador_TCS=" + id_Colaborador_TCS + ", cargo="
+				+ cargo + ", especialidade=" + especialidade + ", status=" + status + ", data="
+				+ data + ", contato_email=" + contato_email + ", contato_telefone=" + contato_telefone
+				+ ", localizacao=" + localizacao + "]";
+	}
+
+
+	
+}
